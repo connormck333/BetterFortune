@@ -1,0 +1,4 @@
+name: BetterFortune
+version: '1.0-SNAPSHOT'
+main: com.devConnor.betterFortune.BetterFortune
+api-version: '1.21'
