@@ -15,6 +15,8 @@ import org.bukkit.inventory.ItemStack;
 
 import java.util.Random;
 
+import static com.devConnor.betterFortune.utils.VersionUtils.getFortuneEnchant;
+
 @Builder
 public class EventListener implements Listener {
 
@@ -42,7 +44,7 @@ public class EventListener implements Listener {
 
         e.setDropItems(false);
         for (ItemStack drop : block.getDrops()) {
-            int newAmountToDrop = calculateAmountToDrop(itemInHand.getEnchantmentLevel(Enchantment.FORTUNE), probabilityThreshold, playerBlockDupe);
+            int newAmountToDrop = calculateAmountToDrop(itemInHand.getEnchantmentLevel(getFortuneEnchant()), probabilityThreshold, playerBlockDupe);
             block.getWorld().dropItemNaturally(block.getLocation(), new ItemStack(drop.getType(), newAmountToDrop));
         }
     }
@@ -62,6 +64,6 @@ public class EventListener implements Listener {
     }
 
     private boolean doesItemHaveFortune(ItemStack item) {
-        return item.containsEnchantment(Enchantment.FORTUNE);
+        return item.containsEnchantment(getFortuneEnchant());
     }
 }

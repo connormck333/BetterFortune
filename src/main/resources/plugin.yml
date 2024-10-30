@@ -1,7 +1,7 @@
 name: BetterFortune
 version: '1.0-SNAPSHOT'
 main: com.devConnor.betterFortune.BetterFortune
-api-version: '1.21'
+api-version: '1.19'
 commands:
   blockdupe:
     description: "Block dupe command for the BetterFortune Plugin"
