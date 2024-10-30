@@ -2,3 +2,29 @@ name: BetterFortune
 version: '1.0-SNAPSHOT'
 main: com.devConnor.betterFortune.BetterFortune
 api-version: '1.21'
+commands:
+  blockdupe:
+    description: "Block dupe command for the BetterFortune Plugin"
+    aliases: ["bd"]
+    usage: "/bd help"
+    children:
+      blockdupe add:
+        description: "Set a player's block dupe amount"
+        usage: "/bd add {player username} {block dupe}"
+      blockdupe remove:
+        description: "Remove a player's block dupe"
+        usage: "/bd remove {player username}"
+  betterfortune:
+    description: "Main command for the BetterFortune Plugin"
+    aliases: ["bf"]
+    usage: "/bf help"
+    children:
+      betterfortune set:
+        description: "Set the probability threshold for a block"
+        usage: "/bf set {block name} {probability threshold}"
+      betterfortune ignore:
+        description: "Set blocks to ignore fortune and block dupes"
+        usage: "/bf ignore {block name}"
+      betterfortune unignore:
+        description: "Set blocks to no longer ignore fortune and block dupes"
+        usage: "/bf unignore {block name}"

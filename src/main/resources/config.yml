@@ -1,0 +1,11 @@
+default-probability-threshold: 0.5
+
+ignored-blocks:
+    - diamond_block
+    - gold_block
+
+custom-probability-thresholds:
+    iron_block: 0.8
+    coal_block: 0.1
+
+block-dupe-enabled-players:
